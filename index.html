@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tutorial.css">
     <link rel="manifest" href="manifest.js">
     <meta name="theme-color" content="#98be71"/>
     <link rel="apple-touch-icon" href="pwaIcons/192x192.png">
     <title>Veckans Mat</title>
 </head>
-<body>
+<body id="body">
     
+    <div class="tut">
+        <div class="tut__slide slide1">
+            <h4 class="tut__header">välkommen till veckans mat!</h4>
+            <p class="tut__desc">Börja med att skriva in de maträtter du vill spara i ditt bibliotek genom att klicka på </p>
+            <button class="btn" onclick="window.location.href='archive.html';">
+                Nästa
+            </button>
+            
+        </div>
+        <div id="container"></div>
+    </div>
     <header>
         <h1>Veckans mat</h1>
         <button class="navStart" onclick="clickMenu()">&#8285;</button>
@@ -21,7 +33,7 @@
             <li class="add-button">Ladda ner appen</li>
         </ul>
     </div>
-    <div class="tutorial"></div>
+
     
     <ul id="weekList"></ul>
 
@@ -62,6 +74,7 @@
 
     <script src="appReg.js"></script>
     <script src="app.js"></script>
+    <script src="tutorial.js"></script>
     <script src="js\pickDish.js"></script>
 </body>
 </html>

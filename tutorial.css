@@ -1,0 +1,19 @@
+.tut {
+    position: absolute;
+    filter: blur(0px);
+    z-index: 105;
+}
+
+.tut__slide {
+    background-color: ivory;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px gray;
+}
+
+#blur {
+    position: absolute;
+    width: 100vh;
+    height: 100vw;
+    background: rgba(255,255,255,0.8);
+}

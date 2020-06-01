@@ -80,6 +80,7 @@ body {
     flex-direction: column;
     max-width: 792px;
     margin: 0 auto;
+    filter: blur(0px); /*Changes when tutorial is active, controlled in tutorial.js*/
 }
 
 header,
