@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,400;0,600;0,700;1,400&family=Sacramento&display=swap');
+/*
+font-family: 'Josefin Slab', serif;
+font-family: 'Sacramento', cursive;
+
+*/
+
+.add-button {
+    /* position: absolute; */
+    top: 1px;
+    left: 1px;
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+p,
+li {
+    font-family: 'Josefin Slab', serif;
+}
+ /* COLORS */
+h1,
+h2,
+.drop-down li,
+.addListBtn,
+.rmvListBtn,
+.navStart,
+.navArc,
+.btn {
+    color: #FBF7F2;
+}
+
+h3,
+p, 
+.btn:hover {
+    color: #282828; 
+}
+
+h3 {
+    font-family: 'Sacramento', cursive;
+    font-size: 1.875rem;
+    font-weight: 400;
+    line-height: 3rem;
+    margin: 40px 0 30px; 
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+li:last-child {
+    margin-bottom: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.label-text {
+    font-family: 'Sacramento', cursive;
+    font-size: 1.875rem;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+/* LAYOUTS */
+
+body {
+    background-color: #F1F9FF;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 792px;
+    margin: 0 auto;
+}
+
+header,
+footer,
+.drop-down ul {
+    background-color: #78B5B9;
+}
+
+header,
+.pick-dish,
+.navStart,
+.nav-categories,
+.listWrapper {
+    display: flex;
+}
+
+header,
+h2,
+.navStart,
+.nav-categories {
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-categories,
+.listWrapper {
+    flex-direction: column;
+}
+
+
+header {
+    position: relative;
+    height: 80px;
+    box-shadow: 0 4px 6px -2px gray;
+    z-index:  100;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.drop-down {
+    position: relative;
+    display: block;
+
+}
+
+#dropMenu {
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    max-height: 100vh;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px -2px gray;
+    overflow: hidden;
+    height: 0px;
+    transition:height 2000ms ease-in-out;
+    z-index: 90;
+    
+    
+}
+
+
+
+.drop-down li {
+    margin-bottom: 0px;
+    padding: 25px 50px;
+    border-bottom: lavender 1px solid;
+}
+
+.drop-down li:last-child {
+    border-bottom: none;
+}
+
+
+
+
+
+.pick-dish {
+    height: 50px;
+    background-color: #F297A6;
+    box-shadow: 0 4px 6px -2px gray;
+}
+
+.listWrapper {
+    padding-left: 25px;
+    padding-right: 25px; 
+    background: url(icons/grid.svg);
+    background-color: white;
+    background-size: 15px;
+    flex: 1;
+
+ 
+}
+
+.listWrapper::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.listPadding { /*H3 category*/
+    padding-top: 30px;
+}
+
+.content { 
+    position: relative;
+    height: auto;
+
+    
+}
+
+.main-footer {
+    
+    height: 60px;
+}
+
+
+
+/*  //LAYOUTS */
+
+
+/*----------MODULS----------*/
+
+#makeDish,
+#formCategory,
+.formCategory,
+.submit {
+    display: flex;
+}
+
+.nav-categories {
+    position: relative;
+    box-shadow: 0 4px 6px -2px  rgba(82, 82, 82, 0.247);
+    z-index: 80;
+}
+
+#formCategory,
+.formCategory {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    padding: 0 5px; 
+}
+
+.formCategory {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#makeDish {
+    flex-direction: column;
+    width: 100%;
+}
+
+.submit {
+    flex-direction: column;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 40px;
+}
+
+
+
+.listContainer {
+    background-color: rgba(251, 247, 242, .75);
+    margin-bottom: 40px;
+    padding: 20px 10px;
+    border: 1px dashed #282828;
+    border-radius: 10px;
+}
+
+#weekList {
+    display: none;
+    background-color: rgba(255,255,255);
+    margin: 40px 25px;
+    padding: 20px 10px;
+    border: 1px dashed #282828;
+    border-radius: 10px;
+}
+
+
+
+/* Components */
+
+.btn {
+    font-family: 'Josefin Slab', Helvetica, Arial, sans-serif;
+}
+
+.btn {
+    background-color: #ADBE52;
+}
+
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"]:checked + label{
+    box-shadow: 1px 3px 8px rgba(50,50,50,.3);
+    background-color: rgba(251, 247, 242, .75);
+    border-radius: 40%;
+}
+
+label {
+    cursor: pointer;
+    width: 82px;
+}
+
+.navStart {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+.navStart:focus  {
+    outline: none;
+}
+
+.navArc {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 30px;
+    top: 30px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: #ADBE52;
+    font-family: monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+    box-shadow: 1px 3px 8px rgba(50,50,50,.3);
+}
+
+
+.btn{
+    cursor: pointer;
+    box-sizing: border-box;
+    align-self: center;
+    height: 55px;
+    width: 164px;
+    font-size:  1.25rem;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn:hover {
+    border: 2px solid #ADBE52;
+    background-color: #F1F9FF;
+
+}
+
+.listWrapper .btn {
+    margin: 40px;
+}
+
+.text-field {
+    border: 1px dashed #282828;
+    border-radius:  10px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    font-size: 1.25rem;
+    line-height: 3rem;
+}
+
+
+.dashed-line {
+    height: 1px;
+    margin: 10px 25px;
+    border-bottom: 1px dashed #282828;
+}
+
+.addListBtn,
+.rmvListBtn {
+    display: flex;;
+}
+
+
+.addListBtn,
+.rmvListBtn {
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+    /* color: white; */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+.addListBtn {
+    background-image: url(icons/Add.svg);
+    background-size: contain;
+}
+
+.rmvListBtn {
+    background-image: url(icons/Remove.svg);
+    background-size: contain;
+    
+}

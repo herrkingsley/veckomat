@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.js">
+    <meta name="theme-color" content="#98be71"/>
+    <link rel="apple-touch-icon" href="pwaIcons/192x192.png">
+    <title>Veckans Mat</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Veckans mat</h1>
+        <button class="navStart" onclick="clickMenu()">&#8285;</button>
+    </header>
+    <div class="drop-down">
+        <ul id="dropMenu">
+            <li><a href="archive.html">Skapa maträtt</a></li>
+            <li class="add-button">Ladda ner appen</li>
+        </ul>
+    </div>
+    
+    <ul id="weekList"></ul>
+
+    <h2 class="pick-dish">Välj maträtter</h2>
+
+    <div class="nav-categories"> 
+        <h3>Välj kategori</h3>
+        <form id="formCategory">
+
+            <input type="radio" id="vegChoice" name="dishCategory" value="veg">  
+            <label for="vegChoice"><img src="icons/veg.svg" alt="vegitariskt"></label>
+            <input type="radio" id="fishChoice" name="dishCategory" value="fish">
+            <label for="fishChoice"><img src="icons/fish.svg" alt="fisk"></label>
+            <input type="radio" id="birdChoice" name="dishCategory" value="bird">
+            <label for="birdChoice"><img src="icons/bird.svg" alt="fågel"></label>
+            <input type="radio" id="meatChoice" name="dishCategory" value="meat">
+            <label for="meatChoice"><img src="icons/meat.svg" alt="kött"></label>
+            <input type="radio" id="miscChoice" name="dishCategory" value="misc">
+            <label for="miscChoice"><img src="icons/misc.svg" alt="övrigt"></label>
+        
+        </form>
+    </div>
+    <div class="listWrapper">
+        <h3 id="listCat"></h3>
+        <ul id="listDishes" ></ul>
+        
+        
+        <button class="btn" onclick="window.location.href='archive.html';">
+            Skapa maträtt
+        </button>
+
+        
+    </div>
+
+
+
+<!-- <footer class="main-footer"></footer> -->
+
+    <script src="appReg.js"></script>
+    <script src="app.js"></script>
+    <script src="js\pickDish.js"></script>
+</body>
+</html>
+

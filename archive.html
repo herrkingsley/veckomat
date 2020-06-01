@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Veckans Mat</title>
+</head>
+<body>
+    
+    <header>
+        <nav class="navArc"><a href="index.html">&#60;</a></nav>
+        <h1>Skapa maträtter</h1>
+    </header>
+    <div class="nav-categories"> 
+        <h3>Välj kategori</h3>
+        <ul id="weekList"></ul>
+        <form id="makeDish">
+            <div class="formCategory">
+
+                <input type="radio" id="veg" name="dishCategory" value="veg" >
+                <label for="veg"><img src="icons/veg.svg" alt="vegitariskt"></label>
+                <input type="radio" id="fish" name="dishCategory" value="fish">
+                <label for="fish"><img src="icons/fish.svg" alt="fisk"></label>
+                <input type="radio" id="bird" name="dishCategory" value="bird">
+                <label for="bird"><img src="icons/bird.svg" alt="fågel"></label>
+                <input type="radio" id="meat" name="dishCategory" value="meat">
+                <label for="meat"><img src="icons/meat.svg" alt="kött"></label>
+                <input type="radio" id="misc" name="dishCategory" value="misc">
+                <label for="misc"><img src="icons/misc.svg" alt="övrigt"></label>
+            </div>
+            <div class="dashed-line"></div>
+            <div class="submit">
+                <h3 class="label-text">Namn</h3>
+                <input id="valueDish" class="text-field" type="text" value="" autocomplete="off" placeholder="Maträtt...">
+                <button id="submit" class="btn" onclick="sendDish(event)">Spara maträtt</button>
+            </div>
+
+        </form>
+    </div>
+    
+    <div id="listDishes" class="listWrapper">
+        <h3>Vegetariskt</h3>
+        <ul id="vegList" class="veg"></ul>
+
+        <h3>Fisk</h3>
+        <ul id="fishList" class="fish"></ul>
+
+        <h3>Fågel</h3>
+        <ul id="birdList" class="bird"></ul>
+
+        <h3>Kött</h3>
+        <ul id="meatList" class="meat"></ul>
+
+        <h3>Övrigt</h3>
+        <ul id="miscList" class="misc"></ul>
+    </div>
+    <script src="appReg.js"></script>
+    <script src="app.js"></script>
+    <script src="js\archive.js"></script>
+
+</body>
+</html>
