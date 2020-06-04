@@ -45,7 +45,7 @@ h3 {
     font-family: 'Sacramento', cursive;
     font-size: 1.875rem;
     font-weight: 400;
-    line-height: 3rem;
+    line-height: 2rem; /*tidigare 3 rem*/
     margin: 40px 0 30px; 
 }
 

@@ -3,17 +3,31 @@ console.log(localStorage);
 const listDishes = document.querySelector('#listDishes');
 const weekDishes = document.querySelector('#weekList');
 const form = document.querySelector('#formCategory');
-let menuOpen = false;
+let menu = document.querySelector('#dropMenu');
+let menuBtn = document.querySelector('#menu');
+
+window.addEventListener('mouseup', function(event){
+    let nav = document.querySelector('#menu');
+    let menu = document.querySelector('#dropMenu');
+    console.log(event.target.parentNode);
+	if (event.target.parentNode != menu && event.target != nav ) {
+        // menu.className =
+        menu.style.cssText = "height: 0px";
+        console.log("close menu");
+    }
+});
+
 
 function clickMenu(){
-    let menu = document.querySelector('#dropMenu');
-    if (menuOpen != true) { 
-    menu.style.cssText = "height: auto";
-    menuOpen = true;
+
+    if (menu.style.cssText != "height: auto;") { 
+        menu.style.cssText = "height: auto";
+        console.log("open menu");
     } else {
-        menuOpen = false;
+        console.log("else");
         menu.style.cssText = "height: 0px";
     }
+
 }
 
 

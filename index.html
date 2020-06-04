@@ -12,20 +12,50 @@
 </head>
 <body id="body">
     
-    <div class="tut">
+    <div id="tutorial" class="tut">
+        
         <div class="tut__slide slide1">
-            <h4 class="tut__header">välkommen till veckans mat!</h4>
-            <p class="tut__desc">Börja med att skriva in de maträtter du vill spara i ditt bibliotek genom att klicka på </p>
-            <button class="btn" onclick="window.location.href='archive.html';">
-                Nästa
-            </button>
+            <span class="rmvListBtn tut__close" onclick= "closeTut()">x</span>
+            <h3 class="tut__header">Välkommen till veckans mat!</h3>
+            <p class="tut__desc">Börja med att skriva in de maträtter du vill spara i ditt bibliotek genom att klicka på knappen <strong >Skapa maträtt</strong><br> eller via menyn.</p><br>
+                <button class="btn" onclick= "nextTut()">
+                    Nästa
+                </button>
             
         </div>
-        <div id="container"></div>
+        <div class="tut__slide slide2">
+            <span class="rmvListBtn tut__close" onclick= "closeTut()">x</span>
+            <h3 class="tut__header">Skapa maträtter</h3>
+            <p class="tut__desc">Välja en av följande kategorier:</p>
+            <div class="tut__cat">
+                <img src="icons/veg.svg" alt="vegitariskt">
+                <img src="icons/fish.svg" alt="fisk">
+                <img src="icons/bird.svg" alt="fågel">
+                <img src="icons/meat.svg" alt="kött">
+                <img src="icons/misc.svg" alt="övrigt">
+            </div>
+            <p class="tut__desc">Skriv sedan namnet på din maträtt och klicka på <strong >Spara maträtt</strong>. <br>
+            <br>När du har lagt in ideér på maträtter kan du börja planera veckans mat.</p>
+            <br>
+            <button class="btn" onclick= "nextTut()">
+                Nästa
+            </button>
+        </div>
+        <div class="tut__slide slide3">
+            <span class="rmvListBtn tut__close" onclick= "closeTut()">x</span>
+            <h3 class="tut__header">Planera veckans mat</h3>
+            <p class="tut__desc">Välj kategori och klicka på den maträtt du vill äta i veckan. <br>
+            Sedan är det bara att upprepa tills du är klar. <br> Lycka till!</p>
+            <br>
+            <button class="btn" onclick= "nextTut()">
+                    Stäng
+                </button>
+            
+        </div>
     </div>
     <header>
         <h1>Veckans mat</h1>
-        <button class="navStart" onclick="clickMenu()">&#8285;</button>
+        <button id="menu" class="navStart" onclick="clickMenu()">&#8285;</button>
     </header>
     <div class="drop-down">
         <ul id="dropMenu">
@@ -37,7 +67,7 @@
     
     <ul id="weekList"></ul>
 
-    <h2 class="pick-dish">Välj maträtter</h2>
+    <h2 class="pick-dish">Planera maträtter</h2>
 
     <div class="nav-categories"> 
         <h3>Välj kategori</h3>
@@ -73,6 +103,7 @@
 <!-- <footer class="main-footer"></footer> -->
 
     <script src="appReg.js"></script>
+    <script src="installPrompt.js"></script>
     <script src="app.js"></script>
     <script src="tutorial.js"></script>
     <script src="js\pickDish.js"></script>
