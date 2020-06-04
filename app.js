@@ -13,7 +13,6 @@ window.addEventListener('mouseup', function(event){
 	if (event.target.parentNode != menu && event.target != nav ) {
         // menu.className =
         menu.style.cssText = "height: 0px";
-        console.log("close menu");
     }
 });
 
@@ -22,9 +21,7 @@ function clickMenu(){
 
     if (menu.style.cssText != "height: auto;") { 
         menu.style.cssText = "height: auto";
-        console.log("open menu");
     } else {
-        console.log("else");
         menu.style.cssText = "height: 0px";
     }
 
